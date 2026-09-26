@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+.header {
+  background-color: #1f2937;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  color: #ffffff;
+}
+
+.header p {
+  color: #cbd5e1;
+  margin-top: 4px;
+}
+
+.footer {
+  background-color: #111827;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 16px;
+  margin-top: 40px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  max-width: 380px;
+  margin: 30px auto;
+  padding: 28px 24px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card--liked {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25);
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #1f2937;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #1f2937;
+}
+
+.role {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.like-btn {
+  padding: 8px 18px;
+  border: 1px solid #1f2937;
+  border-radius: 999px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.like-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-top: 6px;
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-badge {
+  background-color: #eef1ff;
+  color: #1f2937;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 20px 16px;
+  }
+}
