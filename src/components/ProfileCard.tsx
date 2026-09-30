@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import type { Skill, ProfileLink } from '../types';
-import SkillBadge from './SkillBadge';
+import type { ProfileLink } from '../types';
 import LinkItem from './LinkItem';
 
 type ProfileCardProps = {
@@ -8,21 +7,14 @@ type ProfileCardProps = {
   role: string;
   bio: string;
   avatarUrl?: string;
-  skills: Skill[];
   links: ProfileLink[];
 };
 
-export default function ProfileCard({ name, role, bio, avatarUrl, skills, links }: ProfileCardProps) {
-  const [liked, setLiked] = useState<boolean>(false);
+export default function ProfileCard({ name, role, bio, avatarUrl, links }: ProfileCardProps) {
   const [likes, setLikes] = useState<number>(0);
 
-  function handleLike() {
-    setLikes(liked ? likes - 1 : likes + 1);
-    setLiked(!liked);
-  }
-
   return (
-    <article className={liked ? 'card card--liked' : 'card'}>
+    <article className="card">
       {avatarUrl && <img className="avatar" src={avatarUrl} alt={`${name}'s profile avatar photo`} />}
       <h2>{name}</h2>
       <p className="role">{role}</p>
@@ -34,20 +26,9 @@ export default function ProfileCard({ name, role, bio, avatarUrl, skills, links 
         ))}
       </div>
 
-      <button className="like-btn" onClick={handleLike}>
-        {liked ? '❤️ Liked' : '🤍 Like'} · {likes}
+      <button className="like-btn" onClick={() => setLikes(likes + 1)}>
+        ❤️ Like · {likes}
       </button>
-
-      <h3>Skills</h3>
-      {skills.length === 0 ? (
-        <p>No skills added yet.</p>
-      ) : (
-        <ul className="skills">
-          {skills.map(skill => (
-            <SkillBadge key={skill.id} skill={skill} />
-          ))}
-        </ul>
-      )}
     </article>
   );
 }

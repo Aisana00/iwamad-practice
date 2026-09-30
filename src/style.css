@@ -135,3 +135,36 @@ main {
     margin: 20px 16px;
   }
 }
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.header-likes {
+  color: #f87171;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.page {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 500px;
+}
