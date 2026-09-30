@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import type { ProfileLink } from '../types';
 import LinkItem from './LinkItem';
+import LikeButton from './LikeButton';
 
 type ProfileCardProps = {
   name: string;
@@ -11,8 +11,6 @@ type ProfileCardProps = {
 };
 
 export default function ProfileCard({ name, role, bio, avatarUrl, links }: ProfileCardProps) {
-  const [likes, setLikes] = useState<number>(0);
-
   return (
     <article className="card">
       {avatarUrl && <img className="avatar" src={avatarUrl} alt={`${name}'s profile avatar photo`} />}
@@ -26,9 +24,7 @@ export default function ProfileCard({ name, role, bio, avatarUrl, links }: Profi
         ))}
       </div>
 
-      <button className="like-btn" onClick={() => setLikes(likes + 1)}>
-        ❤️ Like · {likes}
-      </button>
+      <LikeButton />
     </article>
   );
 }
