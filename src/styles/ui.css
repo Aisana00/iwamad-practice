@@ -1,0 +1,120 @@
+/* Header — mobile first: stacked by default */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.header p {
+  color: var(--color-text-muted);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: 4px var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+.nav a.active {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.header-likes {
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-6);
+    text-align: left;
+  }
+
+  .brand,
+  .nav {
+    flex-direction: row;
+  }
+
+  .nav {
+    gap: var(--space-4);
+  }
+}
+
+/* Button */
+.btn {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.btn--secondary {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 380px;
+  margin: var(--space-6) auto;
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+/* Tag */
+.tag {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+
+/* Focus ring — always visible when using the keyboard */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
