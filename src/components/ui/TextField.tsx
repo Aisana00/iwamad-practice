@@ -1,0 +1,29 @@
+import { useId } from 'react';
+import type { InputHTMLAttributes } from 'react';
+
+type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
+  label: string;
+  error?: string;
+};
+
+export default function TextField({ label, error, ...rest }: TextFieldProps) {
+  const id = useId();
+  const errorId = `${id}-error`;
+
+  return (
+    <div className="field">
+      <label htmlFor={id}>{label}</label>
+      <input
+        id={id}
+        aria-invalid={error ? true : undefined}
+        aria-describedby={error ? errorId : undefined}
+        {...rest}
+      />
+      {error && (
+        <p id={errorId} className="field-error">
+          {error}
+        </p>
+      )}
+    </div>
+  );
+}
