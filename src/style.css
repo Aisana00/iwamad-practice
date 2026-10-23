@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: #f5f5f5;
+}
+
+.footer {
+  background-color: #111827;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 16px;
+  margin-top: 40px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #1f2937;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.role {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 500px;
+}
