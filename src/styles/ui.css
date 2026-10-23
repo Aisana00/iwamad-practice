@@ -156,3 +156,6 @@ button:focus-visible {
   gap: var(--space-2);
   min-height: 44px;
 }
+.card-grid { display: grid; gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.card-grid h2 { margin-top: 0; font-size: 1.25rem; } .card-grid .card { max-width: none; }
